@@ -1,0 +1,119 @@
+@CHARSET "ISO-8859-1";
+
+
+
+.hidden {
+	display: none;
+}
+
+.title_box { 
+    border: #3333CC 2px solid;
+    background-color: #F0F0F0;
+    margin: 100px;
+	padding: 10px;
+}
+
+.title_box #title { 
+    position: relative; 
+    top : -1.2em;
+	margin-left: 20px;
+    margin-right: 20px;
+	display: inline; 
+    background-color: white;
+    border: #330066 1px dotted;
+	padding: 2px;
+}
+
+.title_box #content {
+}
+
+.treeLink {
+	font-size: 0.7em;
+	font-family: Arial, Times, serif;
+}
+
+.employeeBox { 
+    border: #3333CC 1px solid;
+	width: 250px;
+	height: 35px;
+	margin: 25px;
+	padding: 5px;
+}
+
+.employeeBox #name {
+	font-size: 1.5em;
+	font-family:"Times New Roman", Times, serif;
+}
+
+.employeeBox #title {
+	font-size: 0.9em;
+	font-family: Arial, Times, serif;
+	font-style: italic;
+}
+
+.employeeBox #add {
+	font-size: 0.7em;
+	font-family: Arial, Times, serif;
+	position: relative;
+	top: -45px;
+	right: -210px;
+}
+
+.employeeBox #delete {
+	font-size: 0.7em;
+	font-family: Arial, Times, serif;
+	position: relative;
+	top: -65px;
+	right: -235px;
+}
+
+.empId {
+	visibility:hidden;
+}
+
+.tree, .tree ul{
+  font: normal normal 14px/20px Helvetica, Arial, sans-serif;  
+  list-style-type: none;
+  margin-left: 0 0 0 25px;
+  padding: 0;
+  position: relative;   
+  overflow:hidden;    
+}
+
+.tree li{
+  margin: 0;
+  padding: 0px 0px 0px 40px;  
+  position: relative;   
+}
+  
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+/* horizontal line on inner list items */
+.tree li::before{
+  border-top: 1px solid #999;
+  top: 10px;
+  width: 60px;
+  height: 0;    
+}
+
+/* vertical line on list items */   
+.tree li:after{
+  border-left: 1px solid #999;
+  height: 100%;
+  width: 0px;
+  top: -10px; 
+}
+
+/* lower line on list items from the first level because they don't have parents */
+.tree > li::after{
+  top: 10px;
+}
+
+/* hide line from the last of the first level list items */
+.tree > li:last-child::after{
+  display: none;
+}

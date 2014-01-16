@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+	<bean id="hibernateUtil" class="com.dmi.tommy.util.HibernateUtilImpl"/>
+	<bean id="employeeService" class="com.dmi.tommy.EmployeeServiceImpl" />	
+	<bean id="employeeDao" class="com.dmi.tommy.dao.EmployeeDaoImpl"/>
+	
+	<bean id="showAllAction" class="com.dmi.action.ShowAllAction"/>
+	<bean id="addEmployeeAction" class="com.dmi.action.AddEmployeeAction" scope="prototype"/>
+	<bean id="saveEmployeeAction" class="com.dmi.action.SaveEmployeeAction" scope="prototype"/>
+	<bean id="deleteEmployeeAction" class="com.dmi.action.DeleteEmployeeAction" scope="prototype"/>
+</beans>
