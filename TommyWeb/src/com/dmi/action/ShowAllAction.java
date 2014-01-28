@@ -15,7 +15,7 @@ public class ShowAllAction {
 	@Autowired
 	private EmployeeService employeeService;
 	
-	public String execute() throws Exception {
+	public String execute() {
 		logger.info("Showing all employees");
 		setEmployee(employeeService.getEmployeeRoot());
 		return "success";
